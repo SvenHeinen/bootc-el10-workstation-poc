@@ -1,0 +1,12 @@
+- name: Run a play in the container using roles
+  hosts: localhost
+  
+  tasks:
+    - name: Harden ssh
+      ansible.builtin.include_role:
+        name: harden_ssh
+
+    - name: Remove packages
+      ansible.builtin.include_role:
+        name: remove_packages
+
